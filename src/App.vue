@@ -10,15 +10,16 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-xs-only">
-          <v-btn text :to="{ name: 'about' }">À propos</v-btn>
-          <v-btn text :to="{ name: 'who-we-are' }">Qui sommes-nous</v-btn>
+          <v-btn text :to="{ name: 'myHome' }">Acceuil</v-btn>
+          <v-btn text :to="{ name: 'a_propos' }">À propos</v-btn>
+          <v-btn text :to="{ name: 'who_we_are' }">Qui sommes-nous</v-btn>
           <v-btn text :to="{ name: 'contact' }">Nous contacter</v-btn>
-          <v-btn text :to="{ name: 'contact' }">Se connecter</v-btn>
+          <v-btn text :to="{ name: 'connecter' }">Se connecter</v-btn>
         </v-toolbar-items>
       </v-toolbar>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="sidebar" app>
+    <!-- <v-navigation-drawer v-model="sidebar" app>
       <v-list>
         <v-list-item link :to="{ name: 'about' }">
           <v-list-item-title>À propos</v-list-item-title>
@@ -33,8 +34,11 @@
           <v-list-item-title>Se connecter</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
+ 
     <router-view></router-view>
+
+     
   </v-app>
 </template>
 
