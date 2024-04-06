@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <v-app id="v-app">
     <v-app-bar>
-      <v-toolbar app>
+      <v-toolbar id="v-toolbar" app>
         <v-btn
           class="hidden-lg-and-up"
           @click="sidebar = !sidebar"
@@ -13,7 +13,7 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn text :to="{ name: 'myHome' }">Acceuil</v-btn>
+          <v-btn text :to="{ name: 'myHome' }">Accueil</v-btn>
           <v-btn text :to="{ name: 'a_propos' }">À propos</v-btn>
           <v-btn text :to="{ name: 'who_we_are' }">Qui sommes-nous</v-btn>
           <v-btn text :to="{ name: 'contact' }">Nous contacter</v-btn>
@@ -25,7 +25,7 @@
     <v-navigation-drawer v-model="sidebar" app hide-overlay hide-on-click temporary>
       <v-list>
         <v-list-item link :to="{ name: 'myHome' }">
-          <v-list-item-title>Acceuil</v-list-item-title>
+          <v-list-item-title>Accueil</v-list-item-title>
         </v-list-item>
         <v-list-item link :to="{ name: 'a_propos' }">
           <v-list-item-title>À propos</v-list-item-title>
@@ -53,4 +53,31 @@ const sidebar = ref(false)
 </script>
 
 <style>
+#v-app {
+    background: linear-gradient(-45deg, #c0392b, #2980b9, #3498db, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#v-toolbar {
+  background-color: #001122de;
+  color: white;
+}
+
+
+
+
 </style>
