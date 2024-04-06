@@ -1,3 +1,8 @@
+    
+    // Icon
+    import '@mdi/font/css/materialdesignicons.css'
+    
+    // Router
     import { createRouter, createMemoryHistory } from 'vue-router'
     
     import myHome from '@/pages/myHome.vue'
