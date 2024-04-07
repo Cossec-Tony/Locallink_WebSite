@@ -8,9 +8,17 @@
         >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
-        <v-toolbar-title>
-          <h1>Locallink</h1>
-        </v-toolbar-title>
+        <div class="d-flex align-center">
+          <v-img
+          class="flex-1-0 ma-2 pa-2" 
+          :width="60"
+          aspect-ratio="16/9"
+          src="../img/icon/logoLocallink.svg"
+          alt="Logo Locallink représentant une maison qui sourit"
+          ></v-img>
+          
+          <h1 class="ma-2 pa-2">Locallink</h1>
+      </div>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn text :to="{ name: 'myHome' }">Accueil</v-btn>
@@ -42,7 +50,10 @@
       </v-list>
     </v-navigation-drawer>
 
-    <router-view></router-view>
+    
+
+
+      <router-view></router-view>
   </v-app>
 </template>
 
@@ -76,7 +87,6 @@ const sidebar = ref(false)
   background-color: #001122de;
   color: white;
 }
-
 
 
 
