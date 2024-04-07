@@ -65,10 +65,10 @@ const sidebar = ref(false)
 
 <style>
 #v-app {
-    background: linear-gradient(-45deg, #c0392b, #2980b9, #3498db, #23d5ab);
-    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #4f1f19, #0c0d10 , #0f1316, #186352);
+    background-size: 390% 600%;
     animation: gradient 15s ease infinite;
-}
+} 
 
 @keyframes gradient {
     0% {
@@ -84,7 +84,7 @@ const sidebar = ref(false)
 
 
 #v-toolbar {
-  background-color: #001122de;
+  background-color: #0f1316;
   color: white;
 }
 

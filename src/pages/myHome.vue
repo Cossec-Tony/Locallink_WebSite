@@ -38,6 +38,9 @@
   </script>
   
   <style scoped>
+
+
+
   .black-box {
     padding: 80px;
     color: white;
