@@ -19,7 +19,7 @@ import Who_we_are from "./pages/who_we_are.vue";
 import contact from "./pages/contact.vue";
 import connecter from "./pages/connecter.vue";
 
-const app = createApp(App);
+ const app = createApp(App);
 
 const routes = [
   { path: "/", name: "myHome", component: myHome },

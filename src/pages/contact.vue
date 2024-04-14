@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex flex-column align-start justify-center" style="margin-top: 8%;">
+  <v-container class="d-flex flex-column align-start justify-center" style="margin-top: 8%;   z-index: 1;">
 
     <v-container class="d-flex align-center justify-center">
       <h1 style="color: white; font-size: 5em;">Nous contacter</h1>
@@ -61,17 +61,24 @@
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
-    <button class="blob-btn" @click="submitForm">
-      Submit
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-        </span>
-      </span>
-    </button>
+      <button class="blob-btn" @click="submitForm" :class="{ 'loading': loading }">
+        <template v-if="!loading">
+          <span class="btn-text">Submit</span>
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </template>
+        <template v-if="loading">
+          <div class="blob-btn">
+            <div class="loader"></div>
+          </div>
+        </template>
+      </button>
   </v-container>
     <br/>
   </v-container>
@@ -79,15 +86,50 @@
 
 <script setup>
 
+import { ref } from 'vue';
+
+const loading = ref(false);
+
+const submission = ref(false);
 
 const submitForm = () => {
-  // Ajoutez ici la logique pour soumettre le formulaire via un serveur
-  console.log('Formulaire soumis');
+  loading.value = true;
+  // Simulez une action asynchrone, par exemple une requête HTTP
+  setTimeout(() => {
+    // Réinitialisez l'état de chargement après une courte période
+    loading.value = false;
+    submission.value = true;
+    console.log('Formulaire soumis');
+  }, 2000); // Changez la durée selon vos besoins
 };
 
 </script>
 
 <style>
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e5e9e8;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+.blob-btn.loading {
+  pointer-events: none; /* Désactive les événements de clics lorsque le bouton est en cours de chargement */
+}
+
+@keyframes l3 {to{transform: rotate(1turn)}}
+
 .blob-btn {
   z-index: 1;
   position: relative;
@@ -105,6 +147,7 @@ const submitForm = () => {
   cursor: pointer;
   border-radius: 30px;
 }
+
 
 
 .blob-btn:hover {

@@ -1,49 +1,111 @@
 <template>
-    <v-container class="d-flex flex-column align-center justify-center" style="margin-top: 8%;">
-      <v-img
-        class="mx-auto my-4"
-        src="../../img/icon/logoLocallink.svg"
-        :style="{ width: '100%', maxWidth: '450px' }"
-        aspect-ratio="16/9"
-        alt="Logo Locallink représentant une maison qui sourit"
-      ></v-img>
-      <h2 style="font-size: 2.5em; color: white; text-align: center; max-width: 600px;">“Simplifier vos états des lieux, retrouver la confiance”</h2>
-    </v-container>
+  <v-container class="d-flex flex-column align-center justify-center" style="margin-top: 20%;   z-index: 1;">
+    <h2 id="animation-titre" class="headline" style="color: white; text-align: center;">Simplifier vos états des lieux, retrouver la confiance.</h2>
+  </v-container>
+
+  <v-container class="d-flex align-center justify-center black-box" style="margin-top: 35%; z-index: 1;">
     <v-img
-      style="margin-top: -30%;"
-      src="../../img/wave.svg"
-      :style="{ width: '100%' }"
+      id="imgTéléphone"
+      class="mx-auto"
+      src="../../img/imgLocallink1.png"
+      :style="{ width: '80%', maxWidth: '300px' }"
+      aspect-ratio="16/9"
+      alt="Logo Locallink représentant une maison qui sourit"
     ></v-img>
-  
-    <v-container class="black-box d-flex align-center justify-center" style="margin-top: 5%; max-width: 1400px; background-color: #21303f;">
-      <v-img
-        class="mr-6"
-        src="../../img/icon/logoLocallink.svg"
-        :style="{ width: '100%', maxWidth: '400px' }"
-        aspect-ratio="16/9"
-        alt="Logo Locallink représentant une maison qui sourit"
-      ></v-img>
+
+    <v-container class="text-container mt-6" style="color: white; ">
+      <h3 class="headline">Une application disponible pour tous</h3> 
       <div class="content">
-        <h3 style="font-size: 1.8em; margin-bottom: 1rem;">Une application disponible pour tous</h3>
-        <p style="font-size: 1.2em; margin-bottom: 1rem;">
+        <p class="body-1" style="margin-bottom: 5%;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, ipsum ac fermentum convallis, metus orci finibus ex, at laoreet nisi mauris eget turpis.
         </p>
-        <v-btn color="primary" style="width: 8em; height: 3em; font-size: 1.4em;">A propos</v-btn>
+        <router-link :to="{ name: 'a_propos' }">
+          <button class="blob-btn" @click="submitForm">À propos
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </button>
+        </router-link>
+
       </div>
     </v-container>
-  </template>
-  
-  <script setup>
-  console.log("myHome")
-  </script>
-  
-  <style scoped>
+  </v-container>
 
+  <v-container class="d-flex align-center justify-center black-box" style="margin-top: 40%; margin-bottom: 30%; z-index: 1;">
 
+    <v-container class="text-container mt-6" style="color: white;">
+      <h3 class="headline">Une equipe à l'écoute</h3> 
+      <div class="content">
+        <p class="body-1" style="margin-bottom: 5%;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, ipsum ac fermentum convallis, metus orci finibus ex, at laoreet nisi mauris eget turpis.
+        </p>
 
-  .black-box {
-    padding: 80px;
-    color: white;
+      <router-link :to="{ name: 'who_we_are' }">
+      
+        <button class="blob-btn" @click="submitForm">Qui somme-nous ?
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </button>
+      </router-link>
+      </div>
+    </v-container>
+  </v-container>
+</template>
+
+<script setup>
+console.log("myHome")
+</script>
+
+<style scoped>
+.headline {
+  font-size: 4em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
+#animation-titre {
+    opacity: 0;
+    animation: appearFromBottom 1s ease-in-out forwards;
   }
-  </style>
   
+  @keyframes appearFromBottom {
+    0% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
+  
+
+@media screen and (max-width: 360px) {
+    .headline {
+      font-size: 2em; 
+    }
+
+    .subtitle {
+      font-size: 3em;
+    }
+
+    #imgTéléphone {
+      height: 60%;
+    }
+  }
+
+
+</style>

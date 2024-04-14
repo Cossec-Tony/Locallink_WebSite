@@ -1,9 +1,12 @@
 <template>
-<h1>
-    Je suis sur la page a propos
-</h1>
-</template>
+  
+  </template>
+  
+  <script setup>
 
-<script setup>
-console.log("a propos")
-</script>
+  </script>
+  
+  <style>
+
+  </style>
+  
