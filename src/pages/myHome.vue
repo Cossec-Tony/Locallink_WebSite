@@ -20,7 +20,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, ipsum ac fermentum convallis, metus orci finibus ex, at laoreet nisi mauris eget turpis.
         </p>
         <router-link :to="{ name: 'a_propos' }">
-          <button class="blob-btn" @click="submitForm">À propos
+        <button class="blob-btn" @click="submitForm">À propos
         <span class="blob-btn__inner">
           <span class="blob-btn__blobs">
             <span class="blob-btn__blob"></span>
