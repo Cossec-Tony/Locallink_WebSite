@@ -1,11 +1,30 @@
 <template>
-  <v-container class="d-flex flex-column align-start justify-center" style="margin-top: 8%;   z-index: 1;">
+
+  <v-container style="z-index: 1;">
 
     <v-container class="d-flex align-center justify-center">
       <h1 style="color: white; font-size: 5em;">Nous contacter</h1>
     </v-container>
+
+    <v-container class="d-flex align-center justify-center">
+      <h2 style="color: white; font-size: 2em;">Email : locallink-team@protonmail.com</h2>
+    </v-container>
+
+    <v-container class="d-flex align-center justify-center">
+      <h1 style="color: white; font-size: 4em;">Suivez-nous !</h1>
+    </v-container>
+
+    <v-container class="d-flex align-center justify-center">
+    <a href="https://www.instagram.com/accounts/login/" class="mr-8">
+    <img src="../../img/logoIntagram.png" alt="lien vers l'instagram" style="width: 80px;" height="auto">
+    </a>
+
+    <a href="https://www.instagram.com/accounts/login/">
+    <img src="../../img/logoX.png" alt="lien vers l'instagram" style="width: 80px;" height="auto">
+    </a>
+    </v-container>
     
-    <v-container>
+    <!-- <v-container>
       <v-form v-model="valid">
         <v-container>
           <v-row>
@@ -80,7 +99,7 @@
         </template>
       </button>
   </v-container>
-    <br/>
+    <br/> -->
   </v-container>
 </template>
 
@@ -107,7 +126,6 @@ const submitForm = () => {
 
 <style>
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   padding: 8px;
@@ -124,104 +142,5 @@ const submitForm = () => {
   animation: l3 1s infinite linear;
 }
 
-.blob-btn.loading {
-  pointer-events: none; /* Désactive les événements de clics lorsque le bouton est en cours de chargement */
-}
-
-@keyframes l3 {to{transform: rotate(1turn)}}
-
-.blob-btn {
-  z-index: 1;
-  position: relative;
-  padding: 20px 150px;
-  margin-bottom: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #424adf;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  transition: transform 0.2s ease; 
-  cursor: pointer;
-  border-radius: 30px;
-}
-
-
-
-.blob-btn:hover {
-  color: #ffffff;
-  border-radius: 30px;
-}
-
-.blob-btn:hover:after {
-  transition: all 0.3s;
-  left: 0;
-  top: 0;
-  border-radius: 30px;
-}
-
-.blob-btn__inner {
-  z-index: -1;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background: #ffffff;
-}
-
-.blob-btn__blobs {
-  position: relative;
-  display: block;
-  height: 100%;
-  filter: url('#goo');
-}
-
-.blob-btn__blob {
-  position: absolute;
-  top: 2px; /* Ajustez selon vos besoins */
-  width: 30%; /* Ajustez selon vos besoins */
-  height: 100%;
-  background: #424adf;
-  border-radius: 100%;
-  transform: translate3d(0, 150%, 0) scale(1.7);
-  transition: transform 0.45s;
-
-  @supports (filter: url('#goo')) {
-    transform: translate3d(0, 150%, 0) scale(1.4);
-  }
-
-  &:nth-child(1) {
-    left: 0;
-    transition-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    left: 25%;
-    transition-delay: 0.08s;
-  }
-
-  &:nth-child(3) {
-    left: 50%;
-    transition-delay: 0.16s;
-  }
-
-  &:nth-child(4) {
-    left: 75%;
-    transition-delay: 0.24s;
-  }
-
-  .blob-btn:hover & {
-    transform: translateZ(0) scale(1.7);
-
-    @supports (filter: url('#goo')) {
-      transform: translateZ(0) scale(1.4);
-    }
-  }
-}
 
 </style>

@@ -8,7 +8,7 @@
         >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
-        <div class="d-flex align-center">
+        <div class="d-flex align-center" style="background-color: white;">
           <router-link :to="{ name: 'myHome' }">
             <v-img
               class="flex-1-0 ma-2 pa-2" 
@@ -18,9 +18,11 @@
               alt="Logo Locallink représentant une maison qui sourit"
             ></v-img>
           </router-link>
-          
-          <h1 class="ma-2 pa-2">Locallink</h1>
+          <RouterLink :to="{ name : 'myHome' }">
+            <h1 style="color: #424adf;" class="ma-2 pa-2">Locallink</h1>            
+          </RouterLink>
         </div>
+        
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn text :to="{ name: 'a_propos' }">À propos</v-btn>
@@ -56,20 +58,6 @@
 
 
   <router-view></router-view>
-      <div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
 
     <div class="footer" style="z-index: 1;">
   <div class="bubbles">
@@ -225,21 +213,22 @@
           <p href="" class="footer__link">Nous contacter</p>
         </RouterLink>
       </li>
+      <li>
+        <RouterLink :to="{ name: 'connecter' }">
+          <p href="" class="footer__link">Se connecter</p>
+        </RouterLink>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/accounts/login/">
+        <img src="../img/logoIntagram.png" alt="lien vers l'instagram" style="width: 40px;" height="auto">
+      </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/accounts/login/">
+        <img src="../img/logoX.png" alt="lien vers l'instagram" style="width: 40px;" height="auto" >
+      </a>
+      </li>
     </ul>
-    <div class="footer__socials">
-      <a href="" class="footer__social">
-        <i class="uil uil-github-alt social__icon"></i>
-      </a>
-      <a href="" class="footer__social">
-        <i class="fa-brands fa-codepen"></i>
-      </a>
-      <a href="" class="footer__social">
-        <i class="uil uil-instagram"></i>
-      </a>
-      <a href="" class="footer__social">
-       <i class="uil uil-linkedin-alt"></i>
-      </a>
-    </div>
   </div>
  
   </div>
@@ -252,7 +241,22 @@
     </filter>
   </defs>
 </svg>
+
   </v-app>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
 </template>
 
 <script setup>
@@ -260,10 +264,10 @@ import { ref } from 'vue'
 
 const sidebar = ref(false)
 
-
 </script>
 
 <style>
+
 
 #v-toolbar {
   background-color: #0f1316;
@@ -400,8 +404,17 @@ const sidebar = ref(false)
 }
 
 
+/*
+*****************************************************
 
+Footer
 
+*****************************************************
+*/
+
+h2 {
+  margin-top: 50px;
+}
 
 a {
   text-decoration: none;
@@ -419,7 +432,9 @@ body .footer {
   position: relative;
   grid-area: footer;
   min-height: 12rem;
+  bottom: -150px;
 }
+
 body .footer .bubbles {
   position: absolute;
   top: 0;
@@ -439,7 +454,7 @@ body .footer .bubbles .bubble {
   transform: translate(-50%, 100%);
 }
 body .footer .content {
-  padding: 6rem 1rem 2rem;
+  padding: 1rem 1rem 2rem;
   background: var(--footer-background);
   z-index: 2;
 }
@@ -468,6 +483,7 @@ body .footer .content {
   transition: all 150ms ease-out;
   justify-content: center;
   text-align: center;
+  margin-top: 50px;
 }
 
 .footer__links .footer__link {
@@ -488,26 +504,7 @@ body .footer .content {
     background-color: #fff;
     transition: width .25s ease-out;
 }
-.footer__socials {
-  justify-self: flex-end;
-}
 
-.footer__social {
-  font-size: 1.25rem;
-  margin-right: 1.5rem;
-}
-.footer__social:hover {
-  opacity: 0.8;
-}
-
-.footer__copy {
-  text-align: center;
-  background:rgb(255, 0, 0);
-  font-size: .875rem;
-  text-align: center;
-  color: #dcdcdc;
-  padding: 3rem 0 2rem;
-}
 @-webkit-keyframes bubble-size {
   0%, 75% {
     width: var(--size, 4rem);
@@ -561,15 +558,7 @@ body .footer .content {
   .content span {
     font-size: .813rem;
   }
-
-  .footer__links  {
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
   
-  .footer__socials {
-    justify-self: flex-start;
-  }
 }
 
 @media screen and (max-width: 567px){
@@ -579,5 +568,106 @@ body .footer .content {
   }
 }
 
+
+/* Button */
+
+
+.blob-btn.loading {
+  pointer-events: none;
+}
+
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 150px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #424adf;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  transition: transform 0.2s ease; 
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+
+
+.blob-btn:hover {
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+
+.blob-btn__blob {
+  position: absolute;
+  top: 2px; 
+  width: 30%;
+  height: 100%;
+  background: #424adf;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+
+  @supports (filter: url('#goo')) {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+
+  &:nth-child(1) {
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    left: 25%;
+    transition-delay: 0.08s;
+  }
+
+  &:nth-child(3) {
+    left: 50%;
+    transition-delay: 0.16s;
+  }
+
+  &:nth-child(4) {
+    left: 75%;
+    transition-delay: 0.24s;
+  }
+
+  .blob-btn:hover & {
+    transform: translateZ(0) scale(1.7);
+    @supports (filter: url('#goo')) {
+      transform: translateZ(0) scale(1.4);
+    }
+  }
+}
 
 </style>
