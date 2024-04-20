@@ -6,7 +6,7 @@
    
   <v-container id="block1" class="d-flex align-center justify-center black-box" style="margin-top: 1%; z-index: 1;">
 
-    <img id="Illustration1" src="/img/Illustration1.png" alt="" style="z-index: 1; width: 700px; height: auto; ">
+    <img id="Illustration1" src="/img/Illustration1.png" alt="" style="z-index: 1; width: 500px; height: auto; ">
 
     <v-container class="text-container mt-3" style="color: white; ">
       <h3 class="headline" id="titre2">Une Web App tout support disponible partout !</h3> 
