@@ -1,12 +1,12 @@
 <template>
   <v-container class="d-flex flex-column align-center justify-center" style="z-index: 1; margin-bottom: 125px;">
     <h2 id="titre1" style="color: white; font-size: 7em; text-align: center;">Qu'est-ce-que Locallink ?</h2>
-  <img id="Illustration2" src="../../img/Illustration2.png" alt="" style="z-index: 1; width: 60%; height: auto; ">
+  <img id="Illustration2" src="/img/Illustration2.png" alt="" style="z-index: 1; width: 60%; height: auto; ">
   </v-container>
    
   <v-container id="block1" class="d-flex align-center justify-center black-box" style="margin-top: 1%; z-index: 1;">
 
-    <img id="Illustration1" src="../../img/Illustration1.png" alt="" style="z-index: 1; width: 700px; height: auto; ">
+    <img id="Illustration1" src="/img/Illustration1.png" alt="" style="z-index: 1; width: 700px; height: auto; ">
 
     <v-container class="text-container mt-3" style="color: white; ">
       <h3 class="headline" id="titre2">Une Web App tout support disponible partout !</h3> 
@@ -33,7 +33,7 @@
     <v-img
       id="imgTéléphone"
       class="mx-auto"
-      src="../../img/Illustration3.png"
+      src="/img/Illustration3.png"
       :style="{ width: '80%', maxWidth: '800px' }"
       aspect-ratio="16/9"
       alt="Logo Locallink représentant une maison qui sourit"

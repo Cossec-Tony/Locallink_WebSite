@@ -4,14 +4,8 @@
   </v-container>
 
   <v-container class="d-flex align-center justify-center black-box" style="margin-top: 35%; z-index: 1;">
-    <v-img
-      id="imgTéléphone"
-      class="mx-auto"
-      src="../../img/imgLocallink1.png"
-      :style="{ width: '80%', maxWidth: '300px' }"
-      aspect-ratio="16/9"
-      alt="Logo Locallink représentant une maison qui sourit"
-    ></v-img>
+
+    <img id="imgTéléphone" style="height: 85%;"src="/img/imgLocallink1.png" alt="">
 
     <v-container class="text-container mt-6" style="color: white; ">
       <h3 class="headline">Une application disponible pour tous</h3> 
@@ -105,7 +99,7 @@ console.log("myHome")
     }
 
     #imgTéléphone {
-      height: 60%;
+      height: 40% !important;
     }
 
     .d-flex {

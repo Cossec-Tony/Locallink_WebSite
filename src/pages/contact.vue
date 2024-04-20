@@ -16,11 +16,11 @@
 
     <v-container class="d-flex align-center justify-center">
     <a href="https://www.instagram.com/locallink_fr/" class="mr-8">
-    <img src="../../img/logoIntagram.png" alt="lien vers le compte Locallink Instagram" style="width: 80px;" height="auto">
+    <img src="/img/logoIntagram.png" alt="lien vers le compte Locallink Instagram" style="width: 80px;" height="auto">
     </a>
 
     <a href="https://twitter.com/Locallink_fr">
-    <img src="../../img/logoX.png" alt="lien vers le compte Locallink X" style="width: 80px;" height="auto">
+    <img src="/img/logoX.png" alt="lien vers le compte Locallink X" style="width: 80px;" height="auto">
     </a>
     </v-container>
     

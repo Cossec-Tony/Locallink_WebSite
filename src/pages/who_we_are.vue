@@ -49,9 +49,9 @@
   import { ref, onMounted } from 'vue';
   
   const team = ref([
-    { src: '../../img/Florian.png', name: 'Florian Soler', role: 'Responsable technique' },
-    { src: '../../img/Thomas.png', name: 'Thomas Robson', role: 'Responsable gestion de projet' },
-    { src: '../../img/Hugo.jpg', name: 'Hugo Cossec', role: 'Responsable design' }
+    { src: '/img/Florian.png', name: 'Florian Soler', role: 'Responsable technique' },
+    { src: '/img/Thomas.png', name: 'Thomas Robson', role: 'Responsable gestion de projet' },
+    { src: '/img/Hugo.jpg', name: 'Hugo Cossec', role: 'Responsable design' }
   ]);
   
   const animateImages = ref(false);

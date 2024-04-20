@@ -6,7 +6,8 @@
           class="hidden-lg-and-up"
           @click="sidebar = !sidebar"
         >
-          <v-icon>mdi-menu</v-icon>
+        <v-icon>mdi-menu</v-icon>
+
         </v-btn>
         <div class="d-flex align-center" style="background-color: white;">
           <router-link :to="{ name: 'myHome' }">
@@ -14,7 +15,7 @@
               class="flex-1-0 ma-2 pa-2" 
               :width="60"
               aspect-ratio="16/9"
-              src="../img/icon/logoLocallink.svg"
+              src="/img/icon/logoLocallink.svg"
               alt="Logo Locallink représentant une maison qui sourit"
             ></v-img>
           </router-link>
@@ -217,12 +218,12 @@
       </li> -->
       <li>
         <a href="https://www.instagram.com/locallink_fr/">
-        <img src="../img/logoIntagram.png" alt="lien vers le compte de Locallink sur Instagram" style="width: 40px;" height="auto">
+        <img src='/img/logoIntagram.png' alt="lien vers le compte de Locallink sur Instagram" style="width: 40px;" height="auto">
       </a>
       </li>
       <li>
         <a href="https://twitter.com/Locallink_fr">
-        <img src="../img/logoX.png" alt="lien vers le compte Locallink sur X" style="width: 40px;" height="auto" >
+        <img src='/img/logoX.png' alt="lien vers le compte Locallink sur X" style="width: 40px;" height="auto" >
       </a>
       </li>
     </ul>
