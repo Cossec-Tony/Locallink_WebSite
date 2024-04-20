@@ -3,24 +3,24 @@
   <v-container style="z-index: 1;">
 
     <v-container class="d-flex align-center justify-center">
-      <h1 style="color: white; font-size: 5em;">Nous contacter</h1>
+      <h1 id="titreNousContacter" style="color: white; font-size: 5em; text-align: center;">Nous contacter</h1>
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
-      <h2 style="color: white; font-size: 2em;">Email : locallink-team@protonmail.com</h2>
+      <h2 id="email" style="color: white; font-size: 2em; text-align: center;">locallink-team@protonmail.com</h2>
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
-      <h1 style="color: white; font-size: 4em;">Suivez-nous !</h1>
+      <h1 id="titreSuivezNous" style="color: white; font-size: 4em; text-align: center;">Suivez-nous !</h1>
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
-    <a href="https://www.instagram.com/accounts/login/" class="mr-8">
-    <img src="../../img/logoIntagram.png" alt="lien vers l'instagram" style="width: 80px;" height="auto">
+    <a href="https://www.instagram.com/locallink_fr/" class="mr-8">
+    <img src="../../img/logoIntagram.png" alt="lien vers le compte Locallink Instagram" style="width: 80px;" height="auto">
     </a>
 
-    <a href="https://www.instagram.com/accounts/login/">
-    <img src="../../img/logoX.png" alt="lien vers l'instagram" style="width: 80px;" height="auto">
+    <a href="https://twitter.com/Locallink_fr">
+    <img src="../../img/logoX.png" alt="lien vers le compte Locallink X" style="width: 80px;" height="auto">
     </a>
     </v-container>
     
@@ -142,5 +142,19 @@ const submitForm = () => {
   animation: l3 1s infinite linear;
 }
 
+@media screen and (max-width: 400px) {
+    #titreNousContacter {
+      font-size: 3em !important;
+    }
+
+
+  #email {
+      font-size: 1.2em !important;
+    }
+
+  #titreSuivezNous {
+      font-size: 2em !important;
+    }
+} 
 
 </style>

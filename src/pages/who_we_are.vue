@@ -2,10 +2,10 @@
     <v-container class="d-flex flex-column align-center justify-center" style="margin-top: 8%;   z-index: 1;">
 
       <v-container class="d-flex align-center justify-center">
-        <h1 id="animation-text" style="color: white; font-size: 5em;">Notre équipe</h1>
+        <h1 id="animation-text" style="color: white; font-size: 5em; text-align: center;">Notre équipe</h1>
       </v-container>
   
-      <v-row class="d-flex justify-center">
+      <v-row class="d-flex justify-center align-center">
         <v-col
           v-for="(member, index) in team"
           :key="index"
@@ -31,25 +31,16 @@
       </v-row>
   
  
-      <v-container id="animation-text" class="d-flex mt-16" style="margin-top: 50%;">
+      <v-container id="animation-text" class="d-flex" style="margin-top: 14%;">
         <v-container class="d-column text-center">
           <h1 style="color: white; font-size: 5em;">Notre histoire</h1>
-          <p style="color: white;"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum.
+          <p style="color: white; font-size: 1.5em;"> 
+            Après que Florian, étudiant à l'ENSSAT de Lannion, a eu l'idée, il a vite réalisé que cette tâche était trop grande pour le faire seul. Il a alors sollicité l'aide de Thomas, un ami de sa classe, mais ils ont vite compris qu'ils avaient besoin d'une équipe plus large pour faire décoller le projet. En quête de personnes partageant leur intérêt, ils se sont tournés vers le programme régional de sensibilisation à l'entrepreneuriat "Fabrik ta pépite" 3ème édition en Bretagne. C'est là qu'ils ont rencontré trois étudiants de première année en BUT MMI à l'IUT de Lannion, qui ont pris en charge le design du prototype, la communication vidéo et une part du marketing. L'équipe de Locallink a fini par remporter le deuxième prix parmi 34 équipes participantes, pour son prototype numérique. Malgré le départ de deux membres du projet par la suite, Hugo Cossec est resté pour continuer à travailler sur le design. Aujourd'hui, avec passion et dévouement, nous continuons à développer ce projet dans le but de créer une application utile et pratique pour tous.
           </p>
         </v-container>
   
      
-        <v-img
-          src="../../img/characters.png"
-          :width="500"
-          aspect-ratio="16/9"
-          cover
-        ></v-img>
+
       </v-container>
     </v-container>
   </template>
@@ -121,5 +112,11 @@
     text-align: center;
     margin-bottom: 16px;
   }
+
+  @media screen and (max-width: 840px) {
+    #imgCharacters {
+     display: none;
+    }
+  } 
   </style>
   

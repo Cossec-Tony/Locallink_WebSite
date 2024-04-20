@@ -192,10 +192,7 @@
   </div>
   <div class="content">
       <div class="container">
-    <div class="footer__label">
-      <h2 class="footer__title">L O C A L L I N K</h2>
-        <span class="footer__subtitle"></span>
-    </div>
+      <h2 class="footer__title" style="text-align: center; margin-bottom: 40px;">L O C A L L I N K</h2>
     
     <ul class="footer__links">
       <li>
@@ -219,16 +216,17 @@
         </RouterLink>
       </li>
       <li>
-        <a href="https://www.instagram.com/accounts/login/">
-        <img src="../img/logoIntagram.png" alt="lien vers l'instagram" style="width: 40px;" height="auto">
+        <a href="https://www.instagram.com/locallink_fr/">
+        <img src="../img/logoIntagram.png" alt="lien vers le compte de Locallink sur Instagram" style="width: 40px;" height="auto">
       </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/accounts/login/">
-        <img src="../img/logoX.png" alt="lien vers l'instagram" style="width: 40px;" height="auto" >
+        <a href="https://twitter.com/Locallink_fr">
+        <img src="../img/logoX.png" alt="lien vers le compte Locallink sur X" style="width: 40px;" height="auto" >
       </a>
       </li>
     </ul>
+    <p style="display: flex; justify-content: center; align-items: center;">© 2024 Locallink. Tout droits réservés.</p>
   </div>
  
   </div>
@@ -425,6 +423,10 @@ ul li {
   color: #fff;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 body .footer {
   z-index: 1;
   --footer-background:rgb(0, 0, 0);
@@ -569,7 +571,11 @@ body .footer .content {
 }
 
 
-/* Button */
+/* 
+************************************************
+Button 
+************************************************
+*/
 
 
 .blob-btn.loading {
@@ -669,5 +675,31 @@ body .footer .content {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+    .footer__links {
+      flex-wrap: wrap
+    }
+  }
+
+@media screen and (max-width: 760px) {
+    .blob-btn {
+      font-size: 12px;
+    }
+  }
+
+@media screen and (max-width: 1025px) {
+    .blob-btn {
+      padding: 15px 120px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .blob-btn {
+      padding: 10px 100px;
+    }
+  }
+
+
 
 </style>

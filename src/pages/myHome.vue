@@ -16,8 +16,8 @@
     <v-container class="text-container mt-6" style="color: white; ">
       <h3 class="headline">Une application disponible pour tous</h3> 
       <div class="content">
-        <p class="body-1" style="margin-bottom: 5%;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, ipsum ac fermentum convallis, metus orci finibus ex, at laoreet nisi mauris eget turpis.
+        <p class="body-1" style="margin-bottom: 5%; font-size: 1.5em;">
+          Que vous soyez propriétaire, locataire ou professionnel, notre application est conçue pour vous simplifier la gestion locative avec efficacité et facilité.
         </p>
         <router-link :to="{ name: 'a_propos' }">
         <button class="blob-btn" @click="submitForm">À propos
@@ -39,10 +39,10 @@
   <v-container class="d-flex align-center justify-center black-box" style="margin-top: 40%; margin-bottom: 30%; z-index: 1;">
 
     <v-container class="text-container mt-6" style="color: white;">
-      <h3 class="headline">Une equipe à l'écoute</h3> 
+      <h3 class="headline">Une équipe à l'écoute</h3> 
       <div class="content">
-        <p class="body-1" style="margin-bottom: 5%;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, ipsum ac fermentum convallis, metus orci finibus ex, at laoreet nisi mauris eget turpis.
+        <p class="body-1" style="margin-bottom: 5%; font-size: 1.5em;">
+          Composé de élève ingénieur de l'ENSSAT en alternance et d'un BUT Métier du multimédia et de l'internet à l'IUT de Lannion, notre équipe reste à l'écoute de VOS besoins
         </p>
 
       <router-link :to="{ name: 'who_we_are' }">
@@ -68,6 +68,8 @@ console.log("myHome")
 </script>
 
 <style scoped>
+
+
 .headline {
   font-size: 4em;
   margin-bottom: 1rem;
@@ -93,7 +95,7 @@ console.log("myHome")
   }
   
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 715px) {
     .headline {
       font-size: 2em; 
     }
@@ -105,7 +107,10 @@ console.log("myHome")
     #imgTéléphone {
       height: 60%;
     }
-  }
 
+    .d-flex {
+      flex-wrap: wrap;
+    }
+  }
 
 </style>

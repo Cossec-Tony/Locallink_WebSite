@@ -1,7 +1,7 @@
 <template>
   <v-container class="d-flex flex-column align-center justify-center" style="margin-top: 8%;   z-index: 1;">
     <v-container class="d-flex align-center justify-center">
-      <h1 style="color: white; font-size: 5em;">Se connecter</h1>
+      <h1 id="seConnecterTitle" style="color: white; font-size: 5em; text-align: center;">Se connecter</h1>
     </v-container>
     <v-container>
       <v-form v-model="valid">
@@ -63,3 +63,14 @@ const submitForm = () => {
 };
 </script>
 
+
+<style>
+
+
+@media screen and (max-width: 410px) {
+    #seConnecterTitle {
+      font-size: 3em !important;
+    }
+  } 
+
+</style>
