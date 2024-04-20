@@ -28,7 +28,7 @@
           <v-btn text :to="{ name: 'a_propos' }">À propos</v-btn>
           <v-btn text :to="{ name: 'who_we_are' }">Qui sommes-nous</v-btn>
           <v-btn text :to="{ name: 'contact' }">Nous contacter</v-btn>
-          <v-btn text :to="{ name: 'connecter' }">Se connecter</v-btn>
+          <!-- <v-btn text :to="{ name: 'connecter' }">Se connecter</v-btn> -->
         </v-toolbar-items>
       </v-toolbar>
     </v-app-bar>
@@ -47,9 +47,9 @@
         <v-list-item link :to="{ name: 'contact' }">
           <v-list-item-title>Nous contacter</v-list-item-title>
         </v-list-item>
-        <v-list-item link :to="{ name: 'connecter' }">
+        <!-- <v-list-item link :to="{ name: 'connecter' }">
           <v-list-item-title>Se connecter</v-list-item-title>
-        </v-list-item>
+        </v-list-item> -->
       </v-list>
     </v-navigation-drawer>
 
@@ -210,11 +210,11 @@
           <p href="" class="footer__link">Nous contacter</p>
         </RouterLink>
       </li>
-      <li>
+      <!-- <li>
         <RouterLink :to="{ name: 'connecter' }">
           <p href="" class="footer__link">Se connecter</p>
         </RouterLink>
-      </li>
+      </li> -->
       <li>
         <a href="https://www.instagram.com/locallink_fr/">
         <img src="../img/logoIntagram.png" alt="lien vers le compte de Locallink sur Instagram" style="width: 40px;" height="auto">

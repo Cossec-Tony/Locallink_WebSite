@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <v-container class="d-flex flex-column align-center justify-center" style="margin-top: 8%;   z-index: 1;">
     <v-container class="d-flex align-center justify-center">
       <h1 id="seConnecterTitle" style="color: white; font-size: 5em; text-align: center;">Se connecter</h1>
@@ -73,4 +73,4 @@ const submitForm = () => {
     }
   } 
 
-</style>
+</style> -->
