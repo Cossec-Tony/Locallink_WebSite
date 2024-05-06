@@ -7,7 +7,7 @@
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
-      <h2 id="email" style="color: white; font-size: 2em; text-align: center;">locallink-team@protonmail.com</h2>
+      <h2 id="email" style="color: white; font-size: 2em; text-align: center;"> <a href="mailto:locallink-team@protonmail.com">locallink-team@protonmail.com</a></h2>
     </v-container>
 
     <v-container class="d-flex align-center justify-center">
@@ -125,6 +125,7 @@ const submitForm = () => {
 </script>
 
 <style>
+
 
 .loader {
   width: 50px;

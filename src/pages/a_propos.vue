@@ -25,19 +25,18 @@
       <h3 class="headline" id="titre3">Les fonctionnalités principals</h3> 
       <div class="content">
         <p class="body-1" style="margin-bottom: 5%; font-size: 1.8em;">
-          Découvrez nos fonctionnalités tel que la création de vos États des lieux en simultanée ou de la réutilisation de vos État des lieux précédents en seulement quelques clicks !
+          Découvrez nos fonctionnalités tels que la création de vos états des lieux en simultané ou de la réutilisation de vos État des lieux précédents en seulement quelques clics !
         </p>
       </div>
     </v-container>
 
-    <v-img
-      id="imgTéléphone"
-      class="mx-auto"
-      src="/img/Illustration3.png"
-      :style="{ width: '80%', maxWidth: '800px' }"
-      aspect-ratio="16/9"
-      alt="Logo Locallink représentant une maison qui sourit"
-    ></v-img>
+    <img id="imgTéléphone" 
+    src="/img/Illustration3.png" 
+    alt=""
+    class="mx-auto" 
+    :style="{ width: '80%', maxWidth: '800px' }" 
+    aspect-ratio="16/9"
+    >
   </v-container>
 
   <v-container class="d-flex align-center justify-center black-box" style="margin-top: 15%; margin-bottom: 5%; z-index: 1;">
@@ -59,6 +58,13 @@ console.log("myHome")
 </script>
 
 <style scoped>
+
+#imgTéléphone {
+  display: flex;
+  justify-content: center
+}
+
+
 .headline {
   font-size: 4em;
   margin-bottom: 1rem;

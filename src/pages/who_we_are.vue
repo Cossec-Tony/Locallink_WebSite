@@ -62,6 +62,8 @@
   </script>
   
   <style>
+  
+  
   #animation-text {
     opacity: 0;
     animation: appearFromBottom 1s ease-in-out forwards;

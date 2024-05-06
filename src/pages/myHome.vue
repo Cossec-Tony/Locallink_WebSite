@@ -36,12 +36,12 @@
       <h3 class="headline">Une équipe à l'écoute</h3> 
       <div class="content">
         <p class="body-1" style="margin-bottom: 5%; font-size: 1.5em;">
-          Composé de élève ingénieur de l'ENSSAT en alternance et d'un BUT Métier du multimédia et de l'internet à l'IUT de Lannion, notre équipe reste à l'écoute de VOS besoins
+          Composé d'élèves ingénieurs de l'ENSSAT en alternance et d'un BUT Métier du multimédia et de l'internet à l'IUT de Lannion, notre équipe reste à l'écoute de VOS besoins
         </p>
 
       <router-link :to="{ name: 'who_we_are' }">
       
-        <button class="blob-btn" @click="submitForm">Qui somme-nous ?
+        <button class="blob-btn" @click="submitForm">Qui sommes-nous ?
         <span class="blob-btn__inner">
           <span class="blob-btn__blobs">
             <span class="blob-btn__blob"></span>
@@ -62,6 +62,10 @@ console.log("myHome")
 </script>
 
 <style scoped>
+
+body {
+  overflow-x: hidden !important;
+}
 
 
 .headline {

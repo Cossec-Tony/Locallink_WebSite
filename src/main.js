@@ -39,7 +39,11 @@ const router = createRouter({
   routes,
 });
 
-app.use(router);
+router.afterEach(() => {
+  window.scrollTo(0, 0); // Scroll to the top of the page on route change
+});
 
+app.use(router);
 app.use(vuetify);
 app.mount("#app");
+
